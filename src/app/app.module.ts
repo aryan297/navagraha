@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import {MatIconModule} from "@angular/material/icon"
+import {MatIconModule} from "@angular/material/icon";
+import { MainComponent } from './main/main.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

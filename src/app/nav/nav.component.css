@@ -21,17 +21,17 @@ body {
 
 ::-moz-selection {
   color: #fff;
-  background-color: #8167a9;
+  background-color: lightcoral;
 }
 
 ::selection {
   color: #fff;
-  background-color: #8167a9;
+  background-color: lightcoral;
 }
 
 ::-moz-selection {
   color: #fff;
-  background-color: #8167a9;
+  background-color: lightcoral;
 }
 
 /* #Navigation
