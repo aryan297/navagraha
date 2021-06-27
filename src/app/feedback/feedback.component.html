@@ -1,0 +1,27 @@
+<div class="main">
+    <form [formGroup]="form" (ngSubmit)="login()" method="POST">
+      
+      <mat-card> 
+        <h2>Feedback</h2>
+        <p>
+            <mat-form-field appearance="outline" >
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="Name"placeholder="Name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Feedback</mat-label>
+                <textarea matInput type="text"  formControlName="Feedback" placeholder="Enter feedback.."></textarea>
+                <button *ngIf="Name" matSuffix mat-icon-button aria-label="Clear" (click)="Name=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+          </p>
+          <button mat-raised-button color="primary" (click)="login()">Submit</button>
+        </mat-card>
+    
+    </form>
+    </div>

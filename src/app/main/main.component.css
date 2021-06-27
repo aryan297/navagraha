@@ -34,14 +34,14 @@ a.active {
 }
 
 a {
-  color: #1ee2e7;
+  color: #f08080;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #17d0d5;
+  color: #f08080;
 }
 
 h1,
@@ -68,12 +68,12 @@ h6 {
 }
 
 .btn-primary {
-  border-color: #1ee2e7;
+  border-color: #f08080;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
   color: #fff;
-  background-color: #1ee2e7;
+  background-color: #f08080;
 }
 
 .btn-primary:hover,
@@ -81,9 +81,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  border-color: #17d0d5;
+  border-color: #f08080;
   color: #fff;
-  background-color: #17d0d5;
+  background-color: #f08080;
 }
 
 .btn-primary:active,
@@ -107,25 +107,25 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  border-color: #1ee2e7;
-  background-color: #1ee2e7;
+  border-color: #f08080;
+  background-color: #f08080;
 }
 
 .btn-primary .badge {
-  color: #1ee2e7;
+  color: #f08080;
   background-color: #fff;
 }
 
 .btn-xl {
   padding: 20px 40px;
-  border-color: #1ee2e7;
+  border-color: #f08080;
   border-radius: 3px;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
-  background-color: #1ee2e7;
+  background-color: #f08080;
 }
 
 .btn-xl:hover,
@@ -133,9 +133,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-  border-color: #17d0d5;
+  border-color: #f08080;
   color: #fff;
-  background-color: #17d0d5;
+  background-color: #f08080;
 }
 
 .btn-xl:active,
@@ -159,8 +159,8 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-  border-color: #1ee2e7;
-  background-color: #1ee2e7;
+  border-color: #f08080;
+  background-color: #f08080;
 }
 
 .btn-xl .badge {
@@ -434,7 +434,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #1ee2e7;
+  border-color: #f08080;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -593,12 +593,12 @@ ul.social-buttons li a:active {
 
 ::-moz-selection {
   text-shadow: none;
-  background: #1ee2e7;
+  background: #f08080;
 }
 
 ::selection {
   text-shadow: none;
-  background: #1ee2e7;
+  background: #f08080;
 }
 
 img::-moz-selection {

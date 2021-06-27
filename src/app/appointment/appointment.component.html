@@ -1,0 +1,64 @@
+<body>
+    <div class="main">
+    <form [formGroup]="form">
+      
+      <mat-card > 
+        <h2>Set an Appointment</h2>
+        <p>
+            <mat-form-field appearance="outline" >
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Ryan"  formControlName="Name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+                <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile no.</mat-label>
+                <span matPrefix> &nbsp;</span>
+                <input type="tel" formControlName="tel"matInput placeholder="986-555-1234" type="number">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              </mat-form-field>
+          </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Birth date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dateControl">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </p>
+          <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Birth Time</mat-label>
+            <input  matInput [ngxTimepicker]="picke" placeholder="12:20 AM" formControlName="time">
+            <ngx-material-timepicker #picke></ngx-material-timepicker>
+        </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Appointment date</mat-label>
+                <input matInput [matDatepicker]="pickers" formControlName="AppointmentDate">
+                <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                <mat-datepicker #pickers></mat-datepicker>
+              </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Anything more..</mat-label>
+                <textarea matInput placeholder="when I will get marry.." formControlName="anything"></textarea>
+              </mat-form-field>
+          </p>
+          <button mat-raised-button class="background-color:lightcoral;" (click)="onSave()">Submit</button>
+        </mat-card>
+    
+    </form>
+    </div>
+    </body>

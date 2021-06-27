@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'navagraha';
+
+  public data;
+  constructor(){
+    this.data=localStorage.getItem("data");
+    console.log(this.data);
+    
+  }
+  remove(){
+    localStorage.removeItem("data")
+  }
+  
+
 }

@@ -1,0 +1,88 @@
+<div style="margin-top: 90px;" *ngIf="username!=null">
+<button mat-raised-button (click)="logout()"> Logout</button>
+<div class="export-container">
+	<button mat-raised-button color="primary" (click)="exportTable()">Export Material Table</button>
+</div>
+    <div fxLayout fxLayoutAlign="center center" style="font-size: large; display: flex; justify-content: flex-end;" >
+   
+        <mat-form-field fxFlex="40%" appearance="outline"  style="color: black; width: 400px;">
+            <mat-card>
+            <input matInput type="text" (keyup)="doFilter($event.target.value)"placeholder="Search" >
+        </mat-card>
+        </mat-form-field>
+ 
+    </div>
+
+
+<table id="ExampleMaterialTable" mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="tel">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.tel}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="emailFormControl">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.emailFormControl}} </td>
+    </ng-container>
+
+  
+    <!-- Symbol Column -->
+
+
+    <ng-container matColumnDef="dateControl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header > Birth Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateControl.toDate()|date}} </td>
+      </ng-container>
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header > Birth Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+      </ng-container>
+  
+  
+      <ng-container matColumnDef="AppointmentDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header > Appointment Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.AppointmentDate.toDate() |date}} </td>
+      </ng-container>
+      <ng-container matColumnDef="anything" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header style="width:5% !important;"> More Info </th>
+        <td mat-cell style="width:25% !important;" *matCellDef="let element"> <p>{{element.anything}}</p></td>
+      </ng-container>
+      
+    <!-- 
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header > delete </th>
+
+       
+        <td mat-cell *matCellDef="let element"> <button mat-icon-button ><mat-icon (click)="delete(element.id)">delete_forever</mat-icon></button>
+         </td>
+
+       
+      </ng-container> -->
+
+      
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<mat-paginator [pageSize]="5" [pageSizeOptions]="[2,4,6,10,20]">
+
+</mat-paginator> 
+</div>
+<div *ngIf="username==null" style="margin-top: 200px;">
+    <h1 style="font-size: 50px; text-align: center;" >
+        You need to login as Admin
+    </h1>
+
+</div>
